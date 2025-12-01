@@ -88,7 +88,7 @@ resource "kubernetes_deployment" "kubernetes_nginx_deployment" {
 # HPA for nginx deployement
 resource "kubernetes_horizontal_pod_autoscaler" "hpa" {
     metadata {
-        name      = "kubernetes-hpa"
+        name = "kubernetes-hpa"
         namespace = kubernetes_namespace.ns.metadata[0].name
     }
 
